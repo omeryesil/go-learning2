@@ -1,14 +1,13 @@
 package main
 
-import "fmt"
-import "ioutil"
+import (
+	"fmt"
+)
 
 func main() {
 	cards := newDeck()
 
-	hand, remainingDeck := deal(cards, 5)
+	cards.writeToFile("hello.txt")
 
-	hand.print()
-	fmt.Println("------------------------")
-	remainingDeck.print()
+	fmt.Println("success")
 }
