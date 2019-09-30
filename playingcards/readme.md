@@ -20,16 +20,6 @@ Golang features
 7. Unit Testing 
 
 
-## Go Installation 
-
-You can install Go by following the steps dfined in this link : https://tecadmin.net/install-go-on-ubuntu/ 
-
-To setup GOPATH, just use this script under the project's folder
-```shell
-export GOPATH=$(pwd)
-```
-
-
 ## Running the project
 
 ```shell
