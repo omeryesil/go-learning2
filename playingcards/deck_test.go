@@ -1,7 +1,11 @@
 package main
 
-import "testing"
+import (
+	"os"
+	"testing"
+)
 
+// Text function names must be Capitalized (which makes them public)
 func TestNewDeck(t *testing.T) {
 	d := newDeck()
 
@@ -9,7 +13,32 @@ func TestNewDeck(t *testing.T) {
 	actual := len(d)
 
 	if actual != 52 {
-		t.Errorf("Expected: %d. Actual: %d", expected, actual)
+		t.Errorf("Expected: %v. Actual: %v", expected, actual)
+	}
+}
+
+func TestWriteToFileAndReadDeckFromFile(t *testing.T) {
+	const fileName = "deckfile_testing.txt"
+
+	os.Remove(fileName)
+
+	d := newDeck()
+	d.writeToFile(fileName)
+
+	//check if the file exists
+	_, err := os.Stat(fileName)
+	if os.IsNotExist(err) {
+		t.Errorf("writeToFile fails")
 	}
 
+	//check if the right data is written to the file
+	expectedCard := d[len(d)-1]
+	d = readDeckFromFile(fileName)
+	actualCard := d[len(d)-1]
+	if actualCard != expectedCard {
+		t.Errorf("Expected: %v. Actual: %s", actualCard, expectedCard)
+	}
+
+	//delete the test file
+	os.Remove(fileName)
 }

@@ -15,6 +15,6 @@ func main() {
 	cards.writeToFile(fileName)
 
 	fmt.Println("Reading the deck from a file -------------------------")
-	cards = deckFromFile(fileName)
+	cards = readDeckFromFile(fileName)
 	cards.print()
 }
