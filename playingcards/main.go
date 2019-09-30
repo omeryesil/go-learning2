@@ -1,13 +1,20 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+const fileName = "deck.txt"
 
 func main() {
+	fmt.Println("Creating a new deck -------------------------")
 	cards := newDeck()
 
-	cards.writeToFile("hello.txt")
+	fmt.Println("Shuffling the deck -------------------------")
+	cards = cards.shuffle()
 
-	fmt.Println("success")
+	fmt.Println("Writing the shuffled deck to a file ---------------------")
+	cards.writeToFile(fileName)
+
+	fmt.Println("Reading the deck from a file -------------------------")
+	cards = deckFromFile(fileName)
+	cards.print()
 }
