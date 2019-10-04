@@ -40,6 +40,7 @@ func deal(d deck, handsize int) (deck, deck) {
 	return d[:handsize], d[handsize:]
 }
 
+// Receiver function
 func (d deck) toString() string {
 	return strings.Join(([]string(d)), "|")
 }
