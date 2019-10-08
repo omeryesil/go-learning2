@@ -1,4 +1,4 @@
-# go-learning2
+# go tutorial - sample codes
 
 Simple projects written in golang. 
 
