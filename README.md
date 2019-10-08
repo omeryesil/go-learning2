@@ -1,12 +1,20 @@
 # go tutorial - sample codes
 
-Simple projects written in golang. 
+This repo conitains sample codes written in go 
 
 
-## Go Installation 
+- Download go: https://golang.org/dl/
 
-You can download go: https://golang.org/dl/
-For installation on Debain/Ubuntu, follow this steps: https://tecadmin.net/install-go-on-ubuntu/
+- Go installation: For installation on Debain/Ubuntu, follow this steps: https://tecadmin.net/install-go-on-ubuntu/
+
+- You can use VSCode for code editor
+  - download : https://code.visualstudio.com/download
+  - go extension : https://code.visualstudio.com/docs/languages/go
+  - debugging go in vscode: https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code
+
+
+
+
 
 
 
